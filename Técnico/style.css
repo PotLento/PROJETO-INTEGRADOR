@@ -1,0 +1,138 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fonte simples como no esboço */
+}
+
+/* Estilo para simular a barra do navegador (opcional, mas ajuda a simular o esboço) */
+.browser-header {
+    background-color: #e0e0e0; /* Cinza claro */
+    color: #333;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Estilo para o corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 800px; 
+    background-color: #f4f4f4; /* Fundo claro */
+    padding-top: 50px; /* Espaço para o logo e a barra */
+}
+
+/* Estilo do Logo/Nome da Empresa */
+.header-logo {
+    position: absolute; /* Posiciona no canto superior esquerdo como no esboço */
+    top: 10px;
+    left: 20px;
+    border: 1px solid #333; /* Simula a caixa do esboço */
+    padding: 10px;
+    background-color: #fff;
+}
+
+.header-logo h1 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Container do Formulário */
+.login-container {
+    background-color: #fff; /* Fundo branco para o formulário */
+    padding: 40px;
+    border: 1px solid #ccc; /* Borda simples */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 350px; /* Largura fixa para o formulário */
+    margin-top: 50px; /* Distância do logo (ajuste conforme necessário) */
+}
+
+/* Estilos para cada grupo de input */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Ícone dentro do campo (usando Font Awesome) */
+.input-group i {
+    position: absolute;
+    right: 10px;
+    top: 35px; /* Ajuste a posição do ícone */
+    color: #aaa;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Mais padding à esquerda para o ícone (se fosse usado) */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo para o campo de usuário (com ícone simulado) */
+.input-group:first-child input {
+    padding-left: 40px; 
+}
+.input-group:first-child i {
+    left: 10px;
+    right: auto;
+}
+
+
+/* Checkbox */
+.checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Botão Acessar */
+.btn-acessar {
+    width: 100%;
+    padding: 10px;
+    background-color: #34495e; /* Azul/Cinza escuro, como parece no esboço */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-acessar:hover {
+    background-color: #2c3e50;
+}
+
+/* Link Esqueceu sua senha */
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #3498db; /* Azul para o link */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
