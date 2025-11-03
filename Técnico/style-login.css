@@ -1,0 +1,137 @@
+/* Reset básico e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo da página com centralização Flexbox */
+body {
+    display: flex;
+    justify-content: center; /* Centraliza o formulário horizontalmente */
+    align-items: center;   /* Centraliza o formulário verticalmente */
+    min-height: 100vh;     /* Altura total da tela */
+    background-color: #f4f4f4;
+    padding-top: 50px; /* Adiciona espaço no topo para o header e logo */
+}
+
+/* Estilo para o cabeçalho "Painel do Técnico" */
+.browser-header {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+
+    /* Posiciona a barra fixamente no topo da página */
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+/* Logo/Nome da Empresa */
+.header-logo {
+    position: absolute;
+    top: 60px; /* Posição abaixo do cabeçalho */
+    left: 20px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.header-logo h1 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Container do Formulário */
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Grupos de input */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Escondemos a label, pois o placeholder já cumpre a função visual */
+.input-group label {
+    display: none;
+}
+
+/* Ícone dentro do campo (regra única e alinhamento perfeito) */
+.input-group i {
+    position: absolute;
+    left: 15px; /* Posição à esquerda */
+    top: 50%;   /* Alinhamento vertical perfeito */
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px 12px 45px; /* Padding maior à esquerda para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    display: inline-block; /* Garante que a label do checkbox apareça */
+    font-size: 14px;
+    color: #555;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Botão Acessar */
+.btn-acessar {
+    width: 100%;
+    padding: 12px;
+    background-color: #333; /* Cor escura como no wireframe */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-acessar:hover {
+    background-color: #555;
+}
+
+/* Link Esqueceu sua senha */
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #007bff; /* Cor azul de link */
+    text-decoration: none; /* Mantém sem sublinhado por padrão */
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
