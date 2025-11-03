@@ -1,0 +1,149 @@
+/* --- ESTILOS PARA TODAS AS PÁGINAS DO PAINEL DO GESTOR --- */
+/* --- (Complementa e sobrescreve Bootstrap onde necessário) --- */
+
+/* --- ESTILOS GERAIS --- */
+body.panel-page { 
+    font-family: Arial, sans-serif;
+    /* Background e display flex são controlados pelo Bootstrap e estrutura HTML */
+}
+
+/* --- ESTILOS DA BARRA LATERAL (Sidebar) --- */
+/* Largura, Fundo, Borda Direita e Padding agora são controlados pelas classes Bootstrap (col-*, bg-light, border-end, p-3) */
+
+.sidebar .sidebar-logo { 
+    /* Mantendo estilos customizados para o logo dentro da sidebar */
+    position: static; 
+    border: 1px solid #333; 
+    padding: 10px; 
+    text-align: center; 
+    margin-bottom: 30px; /* Ajustado via classe Bootstrap mb-4 */
+}
+.sidebar .sidebar-logo h1 { 
+    font-size: 18px; 
+    font-weight: normal; 
+    color: #333; 
+    margin: 0; 
+}
+
+/* --- NAVEGAÇÃO DO GESTOR --- */
+/* Ajustando links para trabalharem com nav-link do Bootstrap */
+.sidebar-nav-gestor .nav-link { /* Aplica a todos os links da nav */
+    margin-bottom: 10px; /* mb-2 no HTML */
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    position: relative; 
+}
+.sidebar-nav-gestor .nav-link:hover { 
+    background-color: #e9ecef; /* Cor de hover padrão do Bootstrap pode ser suficiente */
+}
+
+/* Link normal (Centro de Custos) */
+.nav-cost-center { background-color: #fff; border-color: #ccc; }
+
+/* Link Pendentes (Amarelo) */
+.nav-pending { background-color: #fff; border-color: #ffc107; }
+.nav-pending.active { background-color: #ffc107 !important; color: #000 !important; } /* !important para sobrescrever Bootstrap se necessário */
+.nav-pending .arrow { font-size: 12px; }
+
+/* Botão "Ver Solicitação Agora" - Estilo Bootstrap já aplicado no HTML (btn btn-sm btn-outline-secondary...) */
+.view-request-btn { 
+    font-size: 14px; 
+    padding: 10px; 
+    margin-top: -5px; /* Ajuste fino */
+    margin-bottom: 20px; /* mb-3 no HTML */
+}
+
+/* Links Histórico - Contadores e Cores */
+.sidebar-nav-gestor .count { font-weight: normal; color: #555; } 
+.nav-approved { background-color: #fff; border-color: #28a745; }
+.nav-approved.active { background-color: #28a745 !important; color: #fff !important; }
+.nav-approved.active .count { color: #fff; }
+.nav-rejected { background-color: #fff; border-color: #d9534f; }
+.nav-rejected.active { background-color: #d9534f !important; color: #fff !important; }
+.nav-rejected.active .count { color: #fff; }
+
+
+/* --- ESTILOS DO CONTEÚDO PRINCIPAL (Main Content) --- */
+/* flex-grow, padding, background são controlados por Bootstrap (col-*, px-md-4, py-3) */
+
+/* Cabeçalho Principal */
+/* display flex, justify, align são controlados por Bootstrap (d-flex, justify-content-between, align-items-center) */
+/* Estilos de borda e margem são do Bootstrap (border-bottom, mb-3) */
+/* Estilo botão Sair já definido por classes Bootstrap no HTML (btn btn-outline-danger btn-sm) */
+
+/* --- SEÇÃO DE RESUMO FINANCEIRO (painel-gestor.html) --- */
+/* Layout (row, col-*) e Card base são do Bootstrap */
+.summary-box p { margin: 10px 0; color: #555; } /* Estilos específicos mantidos */
+.summary-box hr { border: 0; border-top: 1px solid #e0e0e0; margin: 15px 0; } /* Mantido */
+/* Estilos para .value e .value-small foram removidos pois h3 e h5 do Bootstrap controlam isso no HTML */
+
+/* --- ESTILOS PARA LISTAGEM/ANÁLISE (Tabelas e Detalhes) --- */
+.request-list h2, .analysis-section h2 { 
+    margin-bottom: 25px; /* mb-4 ou mb-5 do Bootstrap pode substituir */
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #333; 
+    text-align: center; /* text-center do Bootstrap pode substituir */
+}
+/* Estilos da Tabela - Serão maioritariamente substituídos por classes Bootstrap no HTML */
+/* Ex: <table class="table table-striped table-hover table-bordered"> */
+/* Mantendo apenas ajustes finos */
+.requests-table { 
+    font-size: 14px; 
+    vertical-align: middle; 
+}
+.requests-table th { 
+    font-weight: bold; 
+    color: #555; 
+}
+
+/* Botões de Ação - Serão maioritariamente substituídos por classes Bootstrap no HTML */
+/* Ex: <a href="#" class="btn btn-sm btn-success action-btn approve">Aprovar</a> */
+/* Mantendo apenas ajustes finos ou cores específicas */
+.action-btn { 
+    font-size: 12px; 
+    margin-right: 5px; /* me-1 ou me-2 do Bootstrap */
+}
+/* Cores específicas (se não quiser usar btn-success, btn-danger, btn-secondary) */
+.action-btn.approve { background-color: #28a745; }
+.action-btn.reject { background-color: #dc3545; }
+.action-btn.details { background-color: #6c757d; }
+.action-btn:hover { opacity: 0.8; } /* Mantido */
+
+
+/* --- ESTILOS PARA A PÁGINA DE ANÁLISE (gestor-analise.html) --- */
+.analysis-box { 
+    background-color: #fdfdfd; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; /* rounded do Bootstrap */
+    padding: 25px 30px; /* p-4 ou p-5 do Bootstrap */
+    margin-bottom: 30px; /* mb-4 ou mb-5 do Bootstrap */
+}
+/* Estilos internos da analysis-box mantidos */
+.analysis-box p, .analysis-box ul li { margin-bottom: 10px; color: #333; line-height: 1.6; }
+.analysis-box strong { color: #000; }
+.analysis-box ul { list-style: none; padding-left: 15px; margin-top: 5px; }
+.analysis-box hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+/* Badges de Status */
+.status-badge { display: inline-block; padding: 8px 15px; border-radius: 5px; color: #fff; font-weight: bold; font-size: 14px; margin: 10px 0; }
+.status-badge.rejected { background-color: #dc3545; }
+.status-badge.approved { background-color: #28a745; }
+/* Contêiner para os botões Rejeitar/Aprovar na Análise */
+.analysis-actions { 
+    margin-top: 25px; /* mt-4 do Bootstrap */
+    text-align: right; /* text-end do Bootstrap */
+}
+/* Estilo dos botões na análise (tamanho maior) */
+.analysis-actions .action-btn { 
+    padding: 10px 20px; /* Ajuste sobre btn-sm */
+    font-size: 14px; 
+    margin-left: 10px; /* ms-2 do Bootstrap */
+}
+/* Mensagem "Não há solicitações" */
+.no-requests-message { border: 2px dashed #ccc; padding: 40px; text-align: center; margin-top: 40px; display: none; }
+.no-requests-message h2 { color: #888; font-weight: bold; }
+
+/* --- FIM DOS ESTILOS DO PAINEL DO GESTOR --- */

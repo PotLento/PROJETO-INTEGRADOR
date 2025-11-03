@@ -1,0 +1,101 @@
+/* --- ESTILOS PARA: login-gestor.html --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body { /* Estilo geral para o body do login */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    position: relative;
+    padding-top: 100px; /* Aumenta espaço para logo */
+}
+/* Removido .browser-header, assumindo que não será usado no login do gestor */
+.header-logo { 
+    position: absolute; 
+    top: 20px; /* Posição mais acima */
+    left: 20px; 
+    border: 1px solid #333; 
+    padding: 10px; 
+    background-color: #fff;
+}
+.header-logo h1 { 
+    font-size: 16px; 
+    font-weight: normal; 
+    margin: 0; 
+    color: #333; 
+}
+.login-container { 
+    background-color: #fff; 
+    padding: 40px; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 350px; 
+}
+.input-group { 
+    margin-bottom: 20px; 
+    position: relative; 
+}
+.input-group label { 
+    display: none; 
+}
+.input-group i { 
+    position: absolute; 
+    left: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #aaa; 
+}
+.input-group input { 
+    width: 100%; 
+    padding: 12px 10px 12px 45px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+.checkbox-group { 
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+}
+.checkbox-group label { 
+    display: inline-block; 
+    font-size: 14px; 
+    color: #555; 
+}
+.checkbox-group input[type="checkbox"] { 
+    margin-right: 8px; 
+}
+.btn-acessar { 
+    width: 100%; 
+    padding: 12px; 
+    background-color: #333; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: bold; 
+    transition: background-color 0.3s; 
+}
+.btn-acessar:hover { 
+    background-color: #555; 
+}
+.forgot-password { 
+    text-align: center; 
+    margin-top: 15px; 
+}
+.forgot-password a { 
+    color: #007bff; 
+    text-decoration: none; 
+    font-size: 14px; 
+}
+.forgot-password a:hover { 
+    text-decoration: underline; 
+}
+/* --- FIM DOS ESTILOS DE LOGIN --- */
