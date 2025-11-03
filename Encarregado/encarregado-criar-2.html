@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Solicitação 2/2 - Painel do Encarregado</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style-encarregado.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="panel-page"> <div class="container-fluid">
+        <div class="row">
+            
+            <aside class="col-md-3 col-lg-2 sidebar bg-light border-end p-3 vh-100"> 
+                <div class="sidebar-logo border text-center mb-4 p-2">
+                    <h1>FORTES ENGENHARIA</h1>
+                </div>
+                
+                <a href="encarregado-criar-1.html" class="btn btn-primary w-100 mb-3 create-btn active">+ CRIAR NOVA SOLICITAÇÃO</a>
+                
+                <nav class="nav flex-column sidebar-nav-manager">
+                    <a href="encarregado-pendentes.html" class="nav-link nav-pending d-flex justify-content-between align-items-center border rounded mb-2">
+                        <span>Solicitações Pendentes</span>
+                        <span class="count">[34]</span>
+                    </a>
+                    <a href="encarregado-aprovados.html" class="nav-link nav-approved d-flex justify-content-between align-items-center border rounded mb-2">
+                        <span>Aprovadas no Mês</span>
+                        <span class="count">[15]</span>
+                    </a>
+                    <a href="encarregado-rejeitadas.html" class="nav-link nav-rejected d-flex justify-content-between align-items-center border rounded mb-2">
+                        <span>Rejeitadas</span>
+                        <span class="count">[1]</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="col-md-9 col-lg-10 ms-sm-auto px-md-4 py-3 main-content">
+                <header class="d-flex justify-content-between align-items-center pb-2 mb-3 border-bottom main-header">
+                    <p class="h5 mb-0">Olá, Encarregado (nome_encarregado)</p>
+                    <a href="login-encarregado.html" class="btn btn-outline-danger btn-sm logout-btn">Sair</a>
+                </header>
+
+                <section class="new-request-form">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            
+                            <a href="painel-encarregado.html" class="text-decoration-none text-muted mb-3 d-block small"><i class="fas fa-chevron-left"></i> Cancelar e Voltar</a>
+
+                            <div class="form-header text-center mb-4">
+                                <h3>Nova Solicitação de Horas Extras</h3>
+                                <p class="text-muted">Passo 2 de 2: Seleção da Equipe</p>
+                            </div>
+
+                            <form action="#" method="POST" id="form-selecao-equipe"> 
+                                
+                                <div class="team-selection">
+                                    <h4 class="h5">Selecione os Técnicos</h4>
+                                    <div class="technician-list border rounded p-3" style="max-height: 250px; overflow-y: auto;">
+                                        
+                                        <div class="form-check technician-item">
+                                            <input class="form-check-input" type="checkbox" name="tecnicos[]" value="id_tecnico1" id="tec1">
+                                            <label class="form-check-label" for="tec1">
+                                                Nome_Tecnico
+                                            </label>
+                                        </div>
+                                        <div class="form-check technician-item">
+                                            <input class="form-check-input" type="checkbox" name="tecnicos[]" value="id_tecnico2" id="tec2">
+                                            <label class="form-check-label" for="tec2">
+                                                Nome_Tecnico
+                                            </label>
+                                        </div>
+                                        <div class="form-check technician-item">
+                                            <input class="form-check-input" type="checkbox" name="tecnicos[]" value="id_tecnico3" id="tec3">
+                                            <label class="form-check-label" for="tec3">
+                                                Nome_Tecnico
+                                            </label>
+                                        </div>
+                                        <div class="form-check technician-item">
+                                            <input class="form-check-input" type="checkbox" name="tecnicos[]" value="id_tecnico4" id="tec4">
+                                            <label class="form-check-label" for="tec4">
+                                                Nome_Tecnico
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div id="msg-sucesso" class="alert alert-success mt-3" role="alert" style="display: none;">
+                                    <strong>✔ Solicitação enviada com sucesso!</strong> O Gestor foi notificado para aprovação.
+                                </div>
+                                <div id="msg-erro" class="alert alert-danger mt-3" role="alert" style="display: none;">
+                                    <strong>X Erro ao enviar.</strong> Por favor, selecione ao menos um técnico.
+                                </div>
+
+                                <div class="form-actions d-flex justify-content-between align-items-center mt-4"> 
+                                    <a href="encarregado-criar-1.html" class="btn btn-outline-secondary">< Voltar</a>
+                                    <button type="submit" class="btn btn-success btn-lg">Enviar Solicitação</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="encarregado-scripts.js"></script>
+
+</body>
+</html>

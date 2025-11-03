@@ -1,0 +1,127 @@
+/* --- ESTILOS PERSONALIZADOS PARA O PAINEL DO ENCARREGADO --- */
+/* (Arquivo para complementar o Bootstrap) */
+
+/* --- GERAL --- */
+body.panel-page { 
+    font-family: Arial, sans-serif;
+    /* O layout principal (flex, larguras, etc.) 
+       agora é controlado pelo Bootstrap no HTML. */
+}
+
+/* --- BARRA LATERAL (SIDEBAR) --- */
+/* O Bootstrap cuida da largura, fundo e espaçamento */
+
+.sidebar .sidebar-logo { 
+    /* Mantemos o estilo do logo, pois é customizado */
+    position: static; 
+    border: 1px solid #333; 
+    padding: 10px; 
+    text-align: center; 
+    /* A margem inferior (mb-4) vem do HTML */
+}
+.sidebar .sidebar-logo h1 { 
+    font-size: 18px; 
+    font-weight: normal; 
+    color: #333; 
+    margin: 0; 
+}
+
+/* --- NAVEGAÇÃO DO ENCARREGADO --- */
+/* O Bootstrap (nav-link) cuida da maior parte do estilo.
+   Nós só ajustamos as fontes e as cores. */
+
+.sidebar-nav-manager .nav-link {
+    font-weight: bold;
+    color: #333; /* Cor do texto padrão */
+}
+
+.sidebar-nav-manager .nav-link:hover {
+     background-color: #e9ecef; /* Cinza claro no hover */
+}
+
+.sidebar-nav-manager .count {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Cores personalizadas da navegação */
+
+/* Pendentes (Amarelo) */
+.nav-pending { 
+    border-color: #ffc107 !important; 
+}
+.nav-pending.active { 
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #000 !important; 
+}
+
+/* Aprovadas (Verde) */
+.nav-approved { 
+    border-color: #28a745 !important; 
+}
+.nav-approved.active { 
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important; 
+}
+.nav-approved.active .count { 
+    color: #fff; 
+}
+
+/* Rejeitadas (Vermelho) */
+.nav-rejected { 
+    border-color: #dc3545 !important; 
+}
+.nav-rejected.active { 
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #fff !important; 
+}
+.nav-rejected.active .count { 
+    color: #fff; 
+}
+
+/* Cor do botão "+ CRIAR" quando está ativo */
+.create-btn.active {
+    background-color: #0b5ed7 !important; 
+    border-color: #0a58ca !important;
+}
+
+/* --- FORMULÁRIOS (Páginas Criar 1 e 2) --- */
+/* Bootstrap (card, form-control, form-label, btn) cuida da maior parte */
+
+/* Estilo para a lista de técnicos ter barra de rolagem */
+.technician-list {
+    max-height: 250px; 
+    overflow-y: auto; 
+    /* Borda e padding vêm do Bootstrap no HTML */
+}
+
+/* Estilo customizado para os itens da lista de técnicos */
+.technician-item {
+    /* O layout (d-flex) vem do 'form-check' do Bootstrap */
+    padding: 5px 0; /* Um pouco de espaço extra */
+}
+.technician-item:hover {
+    background-color: #f9f9f9; /* Leve destaque no hover */
+}
+
+
+/* --- PÁGINAS DE LISTAGEM (Tabelas) --- */
+/* O Bootstrap (table, table-striped, btn-secondary) 
+   cuida de quase todo o estilo das tabelas. */
+
+/* Ajuste fino no texto da tabela */
+.requests-table { 
+    font-size: 14px; 
+    vertical-align: middle; 
+}
+.requests-table th { 
+    font-weight: bold; 
+    color: #555; 
+}
+
+/* Os botões de ação (Detalhes) já usam 'btn-secondary' do Bootstrap. */
+/* Os botões de formulário (Avançar, Enviar) usam 'btn-primary' e 'btn-success'. */
+/* As mensagens de erro/sucesso usam 'alert-danger' e 'alert-success'. */

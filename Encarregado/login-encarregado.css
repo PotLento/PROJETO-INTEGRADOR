@@ -1,0 +1,27 @@
+/* --- ESTILOS PERSONALIZADOS PARA: login-encarregado.html --- */
+/* Mantemos apenas os estilos que o Bootstrap não cobre por padrão */
+
+/* Estilo do Logo/Nome da Empresa (Posicionamento customizado) */
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    /* Adicionando z-index para garantir que fique acima do conteúdo, se necessário */
+    z-index: 10; 
+}
+
+.header-logo h1 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    margin: 0; /* Remove margem padrão do h1 */
+}
+
+/* Opcional: Ajuste para o link 'Esqueceu sua senha?' 
+   se a cor padrão do Bootstrap não agradar */
+.forgot-password a {
+    color: #555; /* Um cinza, se preferir */
+}
