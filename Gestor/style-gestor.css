@@ -1,101 +1,60 @@
-/* --- ESTILOS PARA: login-gestor.html --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    padding-top: 0; 
 }
-body { /* Estilo geral para o body do login */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    position: relative;
-    padding-top: 100px; /* Aumenta espaço para logo */
-}
-/* Removido .browser-header, assumindo que não será usado no login do gestor */
-.header-logo { 
-    position: absolute; 
-    top: 20px; /* Posição mais acima */
-    left: 20px; 
-    border: 1px solid #333; 
-    padding: 10px; 
+
+.header-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border: 1px solid #333;
+    padding: 5px 10px;
     background-color: #fff;
+    z-index: 10;
+    /* Ajuste de largura para a imagem */
+    width: 150px; /* Ajuste este valor se necessário */
+    padding: 5px; /* Padding simples */
 }
-.header-logo h1 { 
-    font-size: 16px; 
-    font-weight: normal; 
-    margin: 0; 
-    color: #333; 
+
+/* REGRA ADICIONADA PARA A IMAGEM */
+.logo-img-header {
+    width: 100%; /* Faz a imagem ocupar 100% da caixa .header-logo */
+    height: auto; /* Mantém a proporção */
 }
-.login-container { 
-    background-color: #fff; 
-    padding: 40px; 
-    border: 1px solid #ccc; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    width: 100%; 
-    max-width: 350px; 
+
+/* REGRA H1 REMOVIDA */
+
+.page-title {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: bold;
+    z-index: 10;
 }
-.input-group { 
-    margin-bottom: 20px; 
-    position: relative; 
+
+.login-card {
+    border: none;
+    border-radius: 1rem;
 }
-.input-group label { 
-    display: none; 
+
+.form-group {
+    position: relative;
 }
-.input-group i { 
-    position: absolute; 
-    left: 15px; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    color: #aaa; 
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    z-index: 3;
 }
-.input-group input { 
-    width: 100%; 
-    padding: 12px 10px 12px 45px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    font-size: 16px; 
+
+.form-group .form-control {
+    padding-left: 40px;
 }
-.checkbox-group { 
-    margin-bottom: 20px; 
-    display: flex; 
-    align-items: center; 
-}
-.checkbox-group label { 
-    display: inline-block; 
-    font-size: 14px; 
-    color: #555; 
-}
-.checkbox-group input[type="checkbox"] { 
-    margin-right: 8px; 
-}
-.btn-acessar { 
-    width: 100%; 
-    padding: 12px; 
-    background-color: #333; 
-    color: white; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    font-size: 16px; 
-    font-weight: bold; 
-    transition: background-color 0.3s; 
-}
-.btn-acessar:hover { 
-    background-color: #555; 
-}
-.forgot-password { 
-    text-align: center; 
-    margin-top: 15px; 
-}
-.forgot-password a { 
-    color: #007bff; 
-    text-decoration: none; 
-    font-size: 14px; 
-}
-.forgot-password a:hover { 
-    text-decoration: underline; 
-}
-/* --- FIM DOS ESTILOS DE LOGIN --- */
