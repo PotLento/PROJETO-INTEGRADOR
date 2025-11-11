@@ -1,27 +1,60 @@
-/* --- ESTILOS PERSONALIZADOS PARA: login-encarregado.html --- */
-/* Mantemos apenas os estilos que o Bootstrap não cobre por padrão */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* Estilo do Logo/Nome da Empresa (Posicionamento customizado) */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    padding-top: 0; 
+}
+
 .header-logo {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     border: 1px solid #333;
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #fff;
-    /* Adicionando z-index para garantir que fique acima do conteúdo, se necessário */
-    z-index: 10; 
+    z-index: 10;
+    /* Ajuste de largura para a imagem */
+    width: 150px; /* Ajuste este valor se necessário */
+    padding: 5px; /* Padding simples */
 }
 
-.header-logo h1 {
-    font-size: 16px;
-    font-weight: normal;
-    color: #333;
-    margin: 0; /* Remove margem padrão do h1 */
+/* REGRA ADICIONADA PARA A IMAGEM */
+.logo-img-header {
+    width: 100%; /* Faz a imagem ocupar 100% da caixa .header-logo */
+    height: auto; /* Mantém a proporção */
 }
 
-/* Opcional: Ajuste para o link 'Esqueceu sua senha?' 
-   se a cor padrão do Bootstrap não agradar */
-.forgot-password a {
-    color: #555; /* Um cinza, se preferir */
+/* REGRA H1 REMOVIDA */
+
+.page-title {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.login-card {
+    border: none;
+    border-radius: 1rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    z-index: 3;
+}
+
+.form-group .form-control {
+    padding-left: 40px;
 }
